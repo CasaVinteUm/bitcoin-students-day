@@ -1,0 +1,13 @@
+{
+  "name": "bitcoin-students-day",
+  "scripts": {
+    "dev": "nuxt dev --extends docus",
+    "build": "nuxt build --extends docus"
+  },
+  "dependencies": {
+    "@nuxtjs/plausible": "1.2.0",
+    "better-sqlite3": "^12.2.0",
+    "docus": "latest",
+    "nuxt": "^4.0.0"
+  }
+}
