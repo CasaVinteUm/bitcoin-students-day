@@ -1,12 +1,12 @@
 ---
 seo:
-  title: Bitcoin Students Day by VinteUm
+  title: Bitcoin Students Day by Vinteum
 ---
 
 ::u-page-hero
 #title
 Bitcoin Students Day
-By VinteUm
+By Vinteum
 
 #description
 Um dia inteiro de imersão prática em Bitcoin e Lightning, com workshops, discussões técnicas e networking.
