@@ -14,13 +14,11 @@ async function onSubmit() {
   if (!state.email) {
     return;
   }
-  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(state.email))
-  // Get last 16 bytes of the digest
-  // then, convert to number and mod by list length
   const descriptorList = descriptors
-
-  const last16Bytes = new Uint8Array(digest.slice(-16))
-  const index = Array.from(last16Bytes).reduce((acc, byte) => acc + byte, 0) % descriptorList.length
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(state.email))
+  const dataView = new DataView(digest.slice(-8))
+  const randomValue = dataView.getBigUint64(0, true)
+  const index = Number(randomValue % BigInt(descriptorList.length))
   descriptor.value = descriptorList[index]
 }
 </script>
