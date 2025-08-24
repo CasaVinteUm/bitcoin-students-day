@@ -29,7 +29,7 @@ async function onSubmit() {
   <div v-if="isDescriptorEmpty" class="flex justify-center">
     <div class="w-1/2">
       <UForm class="space-y-4" :state="state" @submit="onSubmit">
-        <UFormField label="Email">
+        <UFormField label="Email" description="Digite seu e-mail para ver o seu descriptor que será usado no workshop:">
           <UInput placeholder="Digite seu e-mail aqui" class="w-full" v-model="state.email"/>
         </UFormField>
         <UButton type="submit">
