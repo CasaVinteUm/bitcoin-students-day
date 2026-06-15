@@ -8,6 +8,14 @@ export default defineNuxtConfig({
     site: {
         name: 'Bitcoin Students Day',
     },
+    vite: {
+        optimizeDeps: {
+            include: [
+                '@vue/devtools-core',
+                '@vue/devtools-kit',
+            ],
+        },
+    },
     compatibilityDate: '2025-07-18',
     // i18n: {
     //     defaultLocale: 'en',
